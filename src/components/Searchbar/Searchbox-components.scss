@@ -1,0 +1,31 @@
+form {
+  display: inline-block;
+}
+
+.text__box {
+  width: 43.6rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fdfdfe;
+  height: 4rem;
+  padding-left: 4rem;
+  outline: none;
+
+  &::placeholder {
+    font-size: 12px;
+    text-transform: lowercase;
+    color: #363636;
+    opacity: 0.5;
+  }
+}
+
+.Search__icon {
+  font-size: 1.3rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 2.2rem;
+}
+
+.input--wrapper {
+  position: relative;
+}
