@@ -2,8 +2,8 @@
   &::after,
   &::before {
     box-sizing: inherit;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -17,4 +17,5 @@ body {
   line-height: 1;
   font-family: "Inter", sans-serif;
   color: #555;
+  margin: 0;
 }

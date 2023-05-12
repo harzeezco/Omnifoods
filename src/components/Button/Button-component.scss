@@ -1,18 +1,46 @@
 .btn {
   display: inline-block;
-  font-size: 1.7rem;
   font-weight: 500;
   border: none;
   cursor: pointer;
   font-family: inherit;
   transition: all 0.3s;
-  border-radius: 1.5rem;
-  background-color: #cf711f;
-  color: #fff;
 }
 
 .hero__btn {
   padding: 1.6rem 3.2rem;
   text-transform: capitalize;
-  
+  background-color: #cf711f;
+  color: #fff;
+  font-size: 1.7rem;
+  border-radius: 1.5rem;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: #fff;
+    color: #cf711f;
+  }
+}
+
+.clear__btn {
+  background: transparent;
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.search--all__btn {
+  border: 1px solid #cf711f;
+  border-radius: 5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: inherit;
+  width: 9.7rem;
+  height: 3.5rem;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: #cf711f;
+    color: #fff;
+  }
 }

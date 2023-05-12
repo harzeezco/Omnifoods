@@ -19,7 +19,7 @@ const Customer = () => {
         <img src={customer6} alt="customer image" />
       </div>
       <p className="delivered__text">
-        <span>500,000+ </span> meals deliverd last year!
+        <span>500,000+ </span> meals delivered last year!
       </p>
     </div>
   );

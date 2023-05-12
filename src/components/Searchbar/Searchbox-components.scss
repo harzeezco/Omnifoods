@@ -1,7 +1,3 @@
-form {
-  display: inline-block;
-}
-
 .text__box {
   width: 43.6rem;
   border-radius: 1.5rem;
@@ -13,7 +9,7 @@ form {
 
   &::placeholder {
     font-size: 12px;
-    text-transform: lowercase;
+    text-transform: capitalize;
     color: #363636;
     opacity: 0.5;
   }
@@ -27,5 +23,11 @@ form {
 }
 
 .input--wrapper {
+  position: relative;
+}
+
+.section--center {
+  background: #fff;
+  transition: all 0.3s linear;
   position: relative;
 }

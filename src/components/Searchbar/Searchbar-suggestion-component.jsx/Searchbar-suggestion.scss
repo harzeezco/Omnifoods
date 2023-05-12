@@ -1,0 +1,48 @@
+.search__image {
+  max-width: 10rem;
+  height: 10rem;
+  padding-right: 1rem;
+
+  &--paragraph {
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    z-index: 1;
+    color: #fff;
+    transform: translateX(-50%);
+  }
+
+  &--content {
+    position: relative;
+
+    &--overlay {
+      background-color: rgba(0, 0, 0, 0.3);
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      max-width: 10rem;
+      width: 100%;
+    }
+  }
+}
+
+.search__image--container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.search--suggestion--heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+
+.search--suggestion__text {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
