@@ -1,13 +1,15 @@
 import { SearchImage } from "../../../utils/Expenses";
 import Button from "../../Button/Button-component";
-import "./Searchbar-suggestion.scss";
+import "./Recipe-suggestion.scss";
 
-const SearchbarSuggestion = () => {
+const RecipeSuggestion = () => {
   return (
     <>
       <div className="search--suggestion--heading">
         <p className="search--suggestion__text">Suggestions</p>
-        <Button btnInnerText="See All &rarr;" btnClassName="search--all__btn" />
+        <Button type='button' buttonType="seeAll">
+          See All &rarr;
+        </Button>
       </div>
 
       <div className="search__image--container">
@@ -27,4 +29,4 @@ const SearchbarSuggestion = () => {
   );
 };
 
-export default SearchbarSuggestion;
+export default RecipeSuggestion;

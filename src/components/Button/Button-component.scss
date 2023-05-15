@@ -7,7 +7,7 @@
   transition: all 0.3s;
 }
 
-.hero__btn {
+.call-to-action {
   padding: 1.6rem 3.2rem;
   text-transform: capitalize;
   background-color: #cf711f;
@@ -22,14 +22,18 @@
   }
 }
 
-.clear__btn {
-  background: transparent;
+.clear-all {
+  background-color: inherit;
   color: #cf711f;
   font-weight: 600;
   font-size: 1.3rem;
+
+  &:hover {
+    color: #a24d02;
+  }
 }
 
-.search--all__btn {
+.see-all {
   border: 1px solid #cf711f;
   border-radius: 5rem;
   font-weight: 600;
@@ -43,4 +47,32 @@
     background-color: #cf711f;
     color: #fff;
   }
+}
+
+.search {
+  background: #000000;
+  border: 1px solid rgba(237, 237, 237, 0.2);
+  border-radius: 1.2rem;
+  color: #fff;
+  position: absolute;
+  width: 5.1rem;
+  height: 4.3rem;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+
+.delete {
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 6.5rem;
+  top: 1rem;
 }
