@@ -1,4 +1,5 @@
 import "./Searchbox-components.scss";
+
 import SearchboxContent from "./RecipeContent/Recipe-content";
 import SearchInput from "./RecipeInput/RecipeInput";
 

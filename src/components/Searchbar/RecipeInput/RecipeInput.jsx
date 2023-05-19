@@ -37,7 +37,7 @@ const SearchInput = () => {
           </Button>
         )}
         <Button buttonType="search" onClick={handleSearch}>
-          <i className="fa-solid fa-magnifying-glass fa-2xs Search__icon"></i>
+          <i className="fa-solid fa-arrow-rotate-right search__icon"></i>
         </Button>
       </div>
     </form>

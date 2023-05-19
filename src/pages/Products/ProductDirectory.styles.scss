@@ -1,0 +1,21 @@
+.product-directory-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 5rem;
+}
+
+.product-directory-heading {
+  border-bottom: 0.5px solid rgba(#171415, 0.1);
+  margin-bottom: 5rem;
+
+  h2 {
+    font-size: 2rem;
+    color: #19181d;
+    text-transform: capitalize;
+
+    span {
+      margin-left: 1rem;
+      color: #f49038;
+    }
+  }
+}

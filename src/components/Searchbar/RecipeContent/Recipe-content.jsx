@@ -25,9 +25,9 @@ const SearchboxContent = () => {
             Clear All
           </Button>
         </div>
-
+     
         <RecipeInputValue />
-
+ 
         <hr />
 
         <RecipeSuggestion />

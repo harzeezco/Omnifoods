@@ -1,10 +1,18 @@
 import { useContext } from "react";
 import { SearchContext } from "../../../contexts/Search-Context";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Button from "../../Button/Button-component";
 
 const RecipeInputValue = () => {
   const { inputData, handleDeleteData, handleExitGrocery } =
     useContext(SearchContext);
+
+  const navigate = useNavigate();
+
+  function handleInputData(inputValue) {
+    handleExitGrocery();
+    navigate(`product/${inputValue}`);
+  }
 
   return (
     <div style={{ paddingTop: "3rem" }}>
@@ -14,9 +22,12 @@ const RecipeInputValue = () => {
         return (
           <div key={id}>
             <article className="grocery--item">
-              <Link to="/product" onClick={handleExitGrocery}>
+              <Button
+                buttonType="clearAll"
+                onClick={() => handleInputData(inputValue)}
+              >
                 <p className="title">{inputValue}</p>
-              </Link>
+              </Button>
 
               <button
                 type="button"

@@ -7,7 +7,7 @@ export const SearchProvider = ({ children }) => {
   const [inputValue, setInputValue] = useState("");
   const [inputData, setInputData] = useState([]);
   const [showSearchContent, setShowSearchContent] = useState("");
-  const [recipe, setRecipe] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const handleExitGrocery = () => {
     setShowSearchContent("");
@@ -49,8 +49,8 @@ export const SearchProvider = ({ children }) => {
     handleSearch,
     handleClearAll,
     handleDeleteData,
-    setRecipe,
-    recipe,
+    loading,
+    setLoading,
   };
 
   return (
