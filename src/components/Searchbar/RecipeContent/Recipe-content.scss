@@ -11,8 +11,7 @@
   background: #fdfdfe;
   width: 100%;
   margin-top: 1rem;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   height: 33rem;
 
   &::-webkit-scrollbar {

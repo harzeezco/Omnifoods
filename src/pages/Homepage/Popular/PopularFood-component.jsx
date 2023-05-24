@@ -1,10 +1,37 @@
-// const apiUrl =
-//   "https://api.edamam.com/api/recipes/v2?type=public&q=pizza&app_id=6c5f7912&app_key=c643403c391b33ea86e78eab98f8dd99%09";
+import "./PopularFood-component.scss";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+import PopularFoodsCard from "../../../components/PoplarFoods-Card/PopularFoods-Card-component";
+import Button from "../../../components/Button/Button-component";
+
+const apiKey = "0c24b2bd0652462d9347c129dce82282";
+
+const api = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=6`;
 
 const PopularFood = () => {
+  const [popularRecipe, setPopularRecipe] = useState([]);
+
+  useEffect(() => {
+    axios.get(api).then((response) => {
+      setPopularRecipe(response.data.recipes);
+    });
+  }, []);
+
   return (
     <div>
-      <h1>Popular Foods</h1>
+      <div className="popular-Foods-head">
+        <h1>Popular Foods</h1>
+        <Button buttonType={"seeAll"}>See All</Button>
+      </div>
+
+      <div className="popular-recipe-container">
+        {popularRecipe.map((popularRecipeItem) => (
+          <div key={popularRecipeItem.id}>
+            <PopularFoodsCard popularRecipeItem={popularRecipeItem} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

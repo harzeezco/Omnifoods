@@ -7,12 +7,14 @@ $color-secondary: #56585f;
   cursor: pointer;
   border: 1px solid #bebbbb;
   border-radius: 2rem;
+  transition: all 0.4s;
 
   &:hover {
     box-shadow: 0px 114px 68px rgba(255, 34, 37, 0.02),
       0px 51px 51px rgba(255, 34, 37, 0.03),
       0px 13px 28px rgba(255, 34, 37, 0.03), 0px 0px 0px rgba(255, 34, 37, 0.03);
     border-color: #f49038;
+    transform: translateY(-1rem) scale(1);
   }
 
   &--content {
@@ -107,4 +109,28 @@ $color-secondary: #56585f;
   line-height: 13px;
   color: $color-secondary;
   margin: 0;
+}
+
+.product-button {
+  transform: translate(-50%, 125%);
+  width: 80%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #f49038;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0.9rem 1rem;
+  position: absolute;
+
+  left: 50%;
+  cursor: pointer;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.product:hover .product-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
 }

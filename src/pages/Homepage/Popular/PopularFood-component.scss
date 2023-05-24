@@ -1,0 +1,14 @@
+.popular-recipe-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 4rem;
+}
+
+.popular-Foods-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

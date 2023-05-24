@@ -1,16 +1,28 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/Cart-Context";
 
+import { useNavigate, useParams } from "react-router-dom";
+
 import "./ProductCard-component.scss";
 
 import PropTypes from "prop-types";
 
 const ProductCard = ({ recipe }) => {
   const { setAddToCart } = useContext(CartContext);
+  const { inputValue } = useParams();
 
-  const { label, image, totalWeight, cuisineType } = recipe;
+  const navigate = useNavigate();
+
+  const { label, image, totalWeight, cuisineType, calories } = recipe;
+
+  const productDetails = recipe.find(
+    (product) => product.calories === calories
+  );
+  console.log(productDetails);
 
   const handleCartProduct = () => setAddToCart(recipe);
+
+  const handLeProductRoute = () => navigate(`/${inputValue}/${calories}`);
 
   const formattedNumber = totalWeight.toLocaleString("en-US", {
     maximumFractionDigits: 0,
@@ -42,6 +54,9 @@ const ProductCard = ({ recipe }) => {
           </div>
         </div>
       </div>
+      <button onClick={handLeProductRoute} className="product-button">
+        More Info
+      </button>
     </div>
   );
 };

@@ -11,7 +11,8 @@ const RecipeInputValue = () => {
 
   function handleInputData(inputValue) {
     handleExitGrocery();
-    navigate(`product/${inputValue}`);
+
+    navigate(`/${inputValue}`);
   }
 
   return (

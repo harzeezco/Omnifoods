@@ -22,7 +22,7 @@ const onClickCartProduct = (cartProduct, addToCart) => {
 export const CartProvider = ({ children }) => {
   const [cartProduct, setCartProduct] = useState([]);
 
-  console.log(cartProduct);
+
 
   const setAddToCart = (addToCart) => {
     setCartProduct(onClickCartProduct(cartProduct, addToCart));
