@@ -1,15 +1,18 @@
 import { useContext } from "react";
-import { SearchContext } from "../../../contexts/Search-Context";
 import { useNavigate } from "react-router-dom";
-import Button from "../../Button/Button-component";
 
-const RecipeInputValue = () => {
+import "./SearchResult.styles.scss";
+
+import { SearchContext } from "../../../../contexts/Search-Context";
+import Button from "../../../Button/Button-component";
+
+const SearchResult = () => {
   const { inputData, handleDeleteData, handleExitGrocery } =
     useContext(SearchContext);
 
   const navigate = useNavigate();
 
-  function handleInputData(inputValue) {
+  function handleInputResult(inputValue) {
     handleExitGrocery();
 
     navigate(`/${inputValue}`);
@@ -18,16 +21,16 @@ const RecipeInputValue = () => {
   return (
     <div style={{ paddingTop: "3rem" }}>
       {inputData.map((data) => {
-        const { id, inputValue } = data;
+        const { id, cleanTextResult } = data;
 
         return (
           <div key={id}>
             <article className="grocery--item">
               <Button
                 buttonType="clearAll"
-                onClick={() => handleInputData(inputValue)}
+                onClick={() => handleInputResult(cleanTextResult)}
               >
-                <p className="title">{inputValue}</p>
+                <p className="title">{cleanTextResult}</p>
               </Button>
 
               <button
@@ -45,4 +48,4 @@ const RecipeInputValue = () => {
   );
 };
 
-export default RecipeInputValue;
+export default SearchResult;

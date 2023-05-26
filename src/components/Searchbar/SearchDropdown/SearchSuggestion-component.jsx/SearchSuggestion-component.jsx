@@ -1,16 +1,19 @@
-import { useContext } from "react";
-import { SearchImage } from "../../../utils/Expenses";
-import Button from "../../Button/Button-component";
-import "./Recipe-suggestion.scss";
-import { useNavigate } from "react-router-dom";
-import { SearchContext } from "../../../contexts/Search-Context";
+import "./SearchSuggestion.styles.scss";
 
-const RecipeSuggestion = () => {
+import { useContext } from "react";
+import { SearchContext } from "../../../../contexts/Search-Context";
+import { useNavigate } from "react-router-dom";
+
+import Button from "../../../Button/Button-component";
+
+import { SearchSuggestionImages } from "../../../../utils/Expenses";
+
+const SearchSuggestion = () => {
   const { handleExitGrocery } = useContext(SearchContext);
 
   const navigate = useNavigate();
 
-  const handleSearch = (name) => {
+  const handleNavigateRecipe = (name) => {
     navigate(`product/${name}`);
     handleExitGrocery();
   };
@@ -25,7 +28,7 @@ const RecipeSuggestion = () => {
       </div>
 
       <div className="search__image--container">
-        {SearchImage.map((image) => {
+        {SearchSuggestionImages.map((image) => {
           const { id, name, img } = image;
 
           return (
@@ -33,7 +36,7 @@ const RecipeSuggestion = () => {
               style={{ cursor: "pointer" }}
               key={id}
               className="search__image--content"
-              onClick={() => handleSearch(name)}
+              onClick={() => handleNavigateRecipe(name)}
             >
               <div className="search__image--content--overlay"></div>
               <img className="search__image" src={img} alt={`search ${name}`} />
@@ -46,4 +49,4 @@ const RecipeSuggestion = () => {
   );
 };
 
-export default RecipeSuggestion;
+export default SearchSuggestion;

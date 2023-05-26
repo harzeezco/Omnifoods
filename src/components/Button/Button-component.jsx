@@ -7,6 +7,7 @@ const BUTTON_TYPE_CLASSES = {
   delete: "delete",
   callToAction: "call-to-action",
   search: "search",
+  productBtn: "productBtn",
 };
 
 const Button = ({ children, buttonType, ...otherProps }) => {

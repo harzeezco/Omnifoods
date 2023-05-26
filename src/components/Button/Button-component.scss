@@ -2,6 +2,14 @@ $color-primary: #cf711f;
 $color-white: #fff;
 $color-black: #000;
 
+@mixin callToAction {
+  padding: 1.6rem 3.2rem;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  border-radius: 1.5rem;
+  transition: all 0.5s;
+}
+
 @mixin bgColor {
   background-color: $color-primary;
   color: $color-white;
@@ -25,14 +33,25 @@ $color-black: #000;
 .call-to-action {
   @include bgColor();
 
-  padding: 1.6rem 3.2rem;
-  text-transform: capitalize;
-  font-size: 1.7rem;
-  border-radius: 1.5rem;
-  transition: all 0.5s;
+  @include callToAction();
 
   &:hover {
-    @include bgColor();
+    background-color: $color-white;
+    color: $color-primary;
+  }
+}
+
+.productBtn {
+  @include callToAction();
+
+  background-color: $color-white;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  padding: 1.4rem 3rem;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
   }
 }
 

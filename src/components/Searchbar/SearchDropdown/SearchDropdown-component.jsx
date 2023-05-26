@@ -1,14 +1,12 @@
 import { useContext } from "react";
-
 import { SearchContext } from "../../../contexts/Search-Context";
 
 import Button from "../../Button/Button-component";
-import "./Recipe-content.scss";
 
-import RecipeSuggestion from "../Recipe-suggestion-component.jsx/Recipe-suggestion";
-import RecipeInputValue from "./SearchboxInputValue";
+import SearchResult from "./SearchResult/SearchResult-component";
+import SearchSuggestion from "./SearchSuggestion-component.jsx/SearchSuggestion-component.jsx";
 
-const SearchboxContent = () => {
+const SearchbarDropdown = () => {
   const { showSearchContent, handleClearAll } = useContext(SearchContext);
 
   return (
@@ -25,15 +23,15 @@ const SearchboxContent = () => {
             Clear All
           </Button>
         </div>
-     
-        <RecipeInputValue />
- 
+
+        <SearchResult />
+
         <hr />
 
-        <RecipeSuggestion />
+        <SearchSuggestion />
       </div>
     </div>
   );
 };
 
-export default SearchboxContent;
+export default SearchbarDropdown;

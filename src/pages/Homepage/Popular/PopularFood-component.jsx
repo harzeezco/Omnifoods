@@ -5,6 +5,9 @@ import axios from "axios";
 import PopularFoodsCard from "../../../components/PoplarFoods-Card/PopularFoods-Card-component";
 import Button from "../../../components/Button/Button-component";
 
+import "glidejs/dist/css/glide.core.min.css"; // Import Glide.js CSS
+import Glide from "@glidejs/glide";
+
 const apiKey = "0c24b2bd0652462d9347c129dce82282";
 
 const api = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=6`;

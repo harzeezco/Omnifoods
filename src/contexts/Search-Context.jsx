@@ -17,9 +17,12 @@ export const SearchProvider = ({ children }) => {
   const handleSearch = (e) => {
     e.preventDefault();
 
+    const cleanedText = inputValue.replace(/[^a-zA-Z\s]/g, "");
+    const cleanTextResult = cleanedText.trim();
+
     if (inputValue.length >= 3) {
       const id = new Date().getTime();
-      const searchData = { id, inputValue };
+      const searchData = { id, cleanTextResult };
       setInputData([...inputData, searchData]);
 
       setShowSearchContent("show--content");

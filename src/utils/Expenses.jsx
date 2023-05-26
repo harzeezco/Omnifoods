@@ -7,7 +7,7 @@ import IngredientCategory from "../assets/categories/Ingredients.jpeg";
 import MenuCategory from "../assets/categories/menu.jpeg";
 import RecipeCategory from "../assets/categories/Recipe.jpeg";
 
-export const SearchImage = [
+export const SearchSuggestionImages = [
   {
     img: SearchBurger,
     name: "Burger",
@@ -60,51 +60,3 @@ export const CategoryData = [
     product: 44,
   },
 ];
-
-// import { useState, useEffect } from 'react';
-
-// function RecipeSearch() {
-//   const [query, setQuery] = useState('');
-//   const [recipes, setRecipes] = useState([]);
-
-//   const appId = 'YOUR_APP_ID';
-//   const appKey = 'YOUR_APP_KEY';
-
-//   useEffect(() => {
-//     async function getRecipes() {
-//       const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}`);
-//       const data = await response.json();
-//       setRecipes(data.hits);
-//     }
-//     getRecipes();
-//   }, [query]);
-
-//   function handleInputChange(event) {
-//     setQuery(event.target.value);
-//   }
-
-//   function handleSubmit(event) {
-//     event.preventDefault();
-//   }
-
-//   return (
-//     <div>
-//       <form onSubmit={handleSubmit}>
-//         <input type="text" value={query} onChange={handleInputChange} />
-//         <button type="submit">Search</button>
-//       </form>
-//       {recipes.map(recipe => (
-//         <div key={recipe.recipe.uri}>
-//           <h2>{recipe.recipe.label}</h2>
-//           <img src={recipe.recipe.image} alt={recipe.recipe.label} />
-//           <ul>
-//             {recipe.recipe.ingredients.map(ingredient => (
-//               <li key={ingredient.text}>{ingredient.text}</li>
-//             ))}
-//           </ul>
-//           <a href={recipe.recipe.url} target="_blank" rel="noopener noreferrer">View Recipe</a>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }

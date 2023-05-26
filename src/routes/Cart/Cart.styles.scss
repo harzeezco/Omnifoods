@@ -1,0 +1,29 @@
+.cart--container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  .cart--length {
+    border-bottom: 0.5px solid rgba(#171415, 0.1);
+    margin-bottom: 5rem;
+    font-size: 1.3rem;
+  }
+
+  .cart--heading {
+    font-size: 4rem;
+    color: #f49038;
+    text-transform: capitalize;
+    margin-bottom: 5rem;
+  }
+}
+
+.cart--product-container {
+  display: grid;
+  grid-template-columns: 1fr 40rem;
+  column-gap: 4rem;
+}
+
+.cart--product {
+  display: grid;
+  row-gap: 5rem;
+}

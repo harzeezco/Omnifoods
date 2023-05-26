@@ -1,13 +1,14 @@
-import "./ProductDirectory.styles.scss";
+import "./RecipeProduct.styles.scss";
 import useFetch from "../../components/useFetchApi/useFetch";
 import { useParams } from "react-router-dom";
 
 import ProductCard from "../../components/ProductCard/ProductCard-component";
+import useProductData from "../../components/useProductData/useProductData";
 
-const ProductDirectory = () => {
+const RecipeProducts = () => {
   const { inputValue } = useParams();
 
-  const { loading, recipe } = useFetch(inputValue);
+  const { loading, products } = useProductData();
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -22,14 +23,12 @@ const ProductDirectory = () => {
       </div>
       <div className="product-directory-content">
         {!loading &&
-          recipe.map((product) => {
-            const { recipe } = product;
-
-            return <ProductCard key={recipe.calories} recipe={recipe} />;
+          products.map((product) => {
+            return <ProductCard key={product.id} recipe={product} />;
           })}
       </div>
     </div>
   );
 };
 
-export default ProductDirectory;
+export default RecipeProducts;

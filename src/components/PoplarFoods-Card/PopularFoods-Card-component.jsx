@@ -3,8 +3,6 @@ import "./PopularFoods-Card.styles.scss";
 import fallBackImg from "../../assets/gallery/gallery-1.jpg";
 
 const PopularFoodsCard = ({ popularRecipeItem }) => {
-  console.log(popularRecipeItem);
-
   const { image, dishTypes, title, pricePerServing } = popularRecipeItem;
 
   const formattedPrice = pricePerServing.toLocaleString("en-US", {

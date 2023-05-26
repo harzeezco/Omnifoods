@@ -1,4 +1,4 @@
-import "./RecipeInput.scss";
+import "./SearchInput.styles.scss";
 
 import { useContext } from "react";
 import { SearchContext } from "../../../contexts/Search-Context";

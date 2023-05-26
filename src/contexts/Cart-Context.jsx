@@ -4,13 +4,11 @@ import { useState, createContext } from "react";
 export const CartContext = createContext();
 
 const onClickCartProduct = (cartProduct, addToCart) => {
-  const isCartAdd = cartProduct.find(
-    (cart) => cart.calories === addToCart.calories
-  );
+  const isCartAdd = cartProduct.find((cart) => cart.id === addToCart.id);
 
   if (isCartAdd) {
     return cartProduct.map((cartItem) => {
-      return cartItem.calories === addToCart.calories
+      return cartItem.id === addToCart.id
         ? { ...cartItem, quantity: cartItem.quantity + 1 }
         : cartItem;
     });
@@ -21,8 +19,6 @@ const onClickCartProduct = (cartProduct, addToCart) => {
 
 export const CartProvider = ({ children }) => {
   const [cartProduct, setCartProduct] = useState([]);
-
-
 
   const setAddToCart = (addToCart) => {
     setCartProduct(onClickCartProduct(cartProduct, addToCart));

@@ -1,9 +1,16 @@
-import ProductDirectory from "../../pages/Products/productDirectory-component";
+// import ProductDetails from "../../components/ProductDetails/ProductDetails-component";
+
+import RecipeProducts from "../../pages/Products/RecipeProduct-component";
+
+import { Route, Routes } from "react-router-dom";
 
 const Product = () => {
   return (
-    <div style={{ maxWidth: "120rem", margin: "0 auto", padding: "2rem 0" }}>
-      <ProductDirectory />
+    <div>
+      <Routes>
+        <Route index element={<RecipeProducts />} />
+        {/* <Route path="/:id" element={<ProductDetails />} /> */}
+      </Routes>
     </div>
   );
 };
