@@ -1,0 +1,67 @@
+.product--title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+.hero--section {
+  background-color: #fdf2e9;
+
+  min-height: 86vh;
+  padding: 4.8rem 0 2rem 0;
+
+  .hero--content {
+    max-width: 125rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .hero--secondary {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #525151;
+    margin-bottom: 4rem;
+    line-height: 1.2;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.6rem;
+  height: 84vh;
+}
+
+.hero__text--box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero--primary {
+  text-transform: capitalize;
+  color: #fff;
+  backface-visibility: hidden;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+  font-size: 5rem;
+  line-height: 1.05;
+  margin-bottom: 3rem;
+  white-space: nowrap;
+}
+
+.hero-description {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}

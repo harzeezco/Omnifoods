@@ -6,20 +6,44 @@
   h1 {
     color: #19181d;
     font-size: 2.3rem;
+    margin: 0;
   }
 }
 
 .cart--item-desc {
   width: 80%;
   border-bottom: 0.5px solid rgba(#171415, 0.1);
-  margin-bottom: 5rem;
+  margin: 3rem 0rem 2.5rem 0rem;
   border-top: 0.5px solid rgba(#171415, 0.1);
+  row-gap: 1rem;
+  display: grid;
+  padding: 1rem 0rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #808389;
+
+  .price {
+    color: #40434a;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
 }
 
 .cart--item-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 90%;
+
+  padding: 3rem 0;
+
+  &:first-child {
+    padding-top: 0rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 0.5px solid rgba(#171415, 0.1);
+  }
+
   img {
     width: 100%;
     max-width: 30rem;
@@ -27,11 +51,39 @@
     border: 2px solid #ffffff;
     border-radius: 18px;
   }
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 0%;
+    color: #808389;
+  }
 }
 
 .delete-icon {
-  background: #ffffff;
-  opacity: 0.1;
-  border: 1px solid #000000;
+  background: #fff;
+  border: 1px solid #e5e4e4;
   border-radius: 10px;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  color: #000000;
+}
+
+.cart--item-total {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: #f49038;
+  width: 80%;
+
+  .cart-total {
+    font-weight: 800;
+    font-size: 1.6rem;
+  }
 }

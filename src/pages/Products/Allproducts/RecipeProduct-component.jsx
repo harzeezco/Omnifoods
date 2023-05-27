@@ -1,9 +1,9 @@
 import "./RecipeProduct.styles.scss";
-import useFetch from "../../components/useFetchApi/useFetch";
+
 import { useParams } from "react-router-dom";
 
-import ProductCard from "../../components/ProductCard/ProductCard-component";
-import useProductData from "../../components/useProductData/useProductData";
+import ProductCard from "../../../components/ProductCard/ProductCard-component";
+import useProductData from "../../../components/useProductData/useProductData";
 
 const RecipeProducts = () => {
   const { inputValue } = useParams();

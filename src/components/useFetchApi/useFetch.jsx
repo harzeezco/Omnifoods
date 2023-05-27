@@ -14,6 +14,8 @@ const useFetch = (url) => {
   // 77e0cf593adc4f83925b8a09d74d74dc440
   const apiUrl = `https://api.spoonacular.com/recipes/random?apiKey=${spoonacularApiKey}&number=30`;
 
+  const price = Math.trunc(Math.random() * 100);
+  
   // useEffect(() => {
   //   axios.get(api).then((response) => {
   //     setDetails(response.data);
@@ -22,14 +24,37 @@ const useFetch = (url) => {
   // }, []);
 
   // console.log(details);
-
   useEffect(() => {
-    axios.get(apiUrl).then((response) => {
-      setRecipe(response.data.recipes);
-      setLoading(false);
-      console.log(response);
+    fetch("https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast")
+      .then((response) => response.json())
+      .then((data) => {
+        const mealCategories = data.meals;
+        setRecipe(mealCategories);
+        // Process the meal categories as needed
+        // const categories = { ...data.meals, price: price };
+        // console.log(categories);
+      })
+      .catch((error) => {
+        console.log("An error occurred:", error);
+      });
+  }, []);
+  console.log(recipe);
+  useEffect(() => {
+    const newRecipe = recipe.map((item) => {
+      return { ...item, price };
     });
-  }, [url, apiUrl]);
+
+    console.log(newRecipe);
+  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("www.themealdb.com/api/json/v1/1/categories.php")
+  //     .then((response) => {
+  //       setRecipe(response);
+  //       setLoading(false);
+  //       console.log(response);
+  //     });
+  // }, [url, apiUrl]);
 
   return { loading, setRecipe, recipe };
 };
